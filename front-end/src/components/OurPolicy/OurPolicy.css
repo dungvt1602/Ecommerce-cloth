@@ -1,0 +1,47 @@
+.policy {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    padding: 5rem 0;
+    text-align: center;
+    font-size: 0.75rem;
+    line-height: 1rem;
+    gap: 1.5rem;
+}
+
+.policy img {
+    width: 3.25rem;
+    margin: auto;
+    margin-bottom: 1.25rem;
+
+}
+
+.text1 {
+    font-weight: 600;
+}
+
+.text2 {
+    color: #9ca3af; 
+}
+
+
+@media (min-width: 640px) {
+    .policy {
+        flex-direction: row;
+        gap: 0.5rem;
+        font-size: 0.875rem;
+        line-height: 1.25rem;
+        justify-content: space-around;
+        
+    }
+    
+}
+
+@media (min-width: 768px) {
+    .policy {
+        font-size: 1rem;
+        line-height: 1.5rem;
+        justify-content: space-around;
+
+    }
+}

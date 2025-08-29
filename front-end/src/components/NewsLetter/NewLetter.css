@@ -1,0 +1,49 @@
+.new-letter {
+    text-align: center;
+}
+
+
+.new-letter .letter-title {
+    font-size: 1.25rem;
+    font-weight: 500;
+    color: #1f2937;
+}
+
+.letter-form {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 0.75rem;
+    gap: 1rem;
+    border: 2px solid #6b7280;
+}
+
+.input-letter {
+    width: 100%;
+    outline: 2px solid transparent;
+}
+
+.button-letter {
+    background-color: black;
+    color: white;
+    font-size: 0.875rem;
+    padding-right: 1.5rem;
+    padding-left: 1.5rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+@media (min-width: 640px) {
+    .letter-form {
+        width: 50%;
+    }
+    .input-letter{
+        flex-grow: 1;
+        flex-shrink: 1;
+        flex-basis: 0%;
+    }
+}

@@ -1,0 +1,57 @@
+.best-seller {
+    margin : 2.5rem 0;
+}
+
+.title-best-seller {
+    text-align: center;
+    padding-top: 2.0rem;
+    padding-bottom: 2.0rem;
+    font-size: 1.825rem; 
+   
+}
+
+
+.title-best-seller .lyrics {
+    width: 75%;
+    margin: auto;
+    color: #4b5563;
+    font-size: 0.75rem;
+    line-height: 1rem;
+}
+
+.list-products {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+
+}
+
+@media (min-width: 640px) {
+    .title-best-seller .lyrics {
+        width: 50%;
+        font-size: 0.875rem;
+        line-height: 1.25rem;
+    }
+
+    .list-products {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
+
+@media (min-width: 768px) {
+    .title-best-seller .lyrics {
+
+        font-size: 1rem;
+        line-height: 1.5rem;
+    }
+
+    .list-products {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+}
+
+@media (min-width: 1024px) {
+    .list-products {
+        grid-template-columns: repeat(5, minmax(0, 1fr));
+    }
+}

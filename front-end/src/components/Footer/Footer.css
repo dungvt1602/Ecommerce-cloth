@@ -1,0 +1,50 @@
+.footer {
+    display: flex;
+    flex-direction: column;
+    gap: 3.5rem;
+    margin-top: 2.5rem;
+    margin-bottom: 2.5rem;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+}
+
+.logo-footer img {
+    width: 8rem;
+    margin-bottom: 1.25rem;
+}
+
+.logo-footer p {
+    color: #4b5563;
+    width: 100%;
+}
+
+@media (min-width: 768px) {
+    .logo-footer p {
+        width: 67%;
+    }
+    
+}
+
+@media (min-width: 640px) {
+    .footer {
+
+        display: grid;
+        grid-template-columns: 3fr 1fr 1fr;
+
+    }
+}
+
+.about-footer ul {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    color: #4b5563;
+}
+
+.contact-footer ul {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    color: #4b5563;
+}
+
