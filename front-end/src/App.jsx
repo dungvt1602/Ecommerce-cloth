@@ -12,6 +12,7 @@ import PlaceOrder from './pages/PlaceOrder/PlaceOrder'
 import Order from './pages/Order/Order'
 import Navbar from './components/Navbar/Navbar'
 import Footer from './components/Footer/Footer'
+import SearchBar from './components/SearchBar/SearchBar'
 
 function App() {
   
@@ -19,6 +20,7 @@ function App() {
   return (
     <div className='container'>
       <Navbar/>
+      <SearchBar/>
     <Routes>
       <Route path='/' element={<Home/>} />
       <Route path='/collection' element={<Collection/>} />

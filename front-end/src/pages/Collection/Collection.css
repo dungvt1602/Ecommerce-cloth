@@ -1,10 +1,11 @@
 .collection {
     display: flex;
-    align-items: center;
+   
     padding-top: 2.5rem;
     flex-direction: column;
     border-top-width: 1px ;
     border-top-style: solid ;
+    border-color: #d1d5db;
     gap: 0.5rem;
 
 }
@@ -21,16 +22,15 @@
 }
 
 .filter {
-
     margin-top: 0.5rem;
     margin-bottom: 0.5rem;
     font-size: 1.25rem;
     line-height: 1.75rem;
     cursor: pointer;
+    align-items: center;
     display: flex;
     gap: 0.5rem;
-    align-items: center;
-
+    
 }
 
 .filter img {
@@ -75,4 +75,50 @@
 .list-category p {
     display: flex;
     gap: 0.5rem;
+}
+
+.product-collection {
+    flex: 1 1 0%;
+}
+
+.product-title {
+    display:flex;
+    justify-content: space-between;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+@media (min-width: 640px) {
+    .product-title {
+        font-size: 1.5rem;
+        line-height: 1.33rem;
+    }
+}
+
+.product-title select {
+    border: 2px solid #d1d5db;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+}
+
+.product-sort {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) ;
+    gap: 1rem;
+    row-gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+    .product-sort {
+        grid-template-columns: repeat(3, minmax(0, 1fr)) ;
+    }
+}
+
+@media (min-width: 1024px) {
+    .product-sort {
+        grid-template-columns: repeat(4, minmax(0, 1fr)) ;
+    }
 }

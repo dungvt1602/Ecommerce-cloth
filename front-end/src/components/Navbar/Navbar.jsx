@@ -1,14 +1,16 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import './Navbar.css'
 import logo from '../../assets/logo.png'
 
 import { Link, NavLink } from 'react-router-dom'
+import { ShopContext } from '../../context/ShopContext'
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = React.useState(false);
+  const {setShowSearch} = useContext(ShopContext);
 
   return (
-    <div className='navbar '>
+    <div className='navbar'>
       <Link to={"/"}>
       <img  src={logo} alt='logo' />
       </Link>
@@ -32,7 +34,7 @@ const Navbar = () => {
       </ul>
 
       <div className='end-nav'>
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+        <svg onClick={() => setShowSearch(true)} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
           <path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
         </svg>
         <div className='profile-group'> 
