@@ -142,7 +142,7 @@ const Collection = () => {
         <div className="product-sort">
           {
             filterProducts.map((item, index) => (
-              <ProductItems key={index} id={item.id} name={item.name} 
+              <ProductItems key={index} id={item._id} name={item.name} 
               image={item.image} price={item.price}/>
             ))
           }
