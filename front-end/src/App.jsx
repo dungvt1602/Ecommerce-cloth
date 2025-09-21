@@ -14,25 +14,33 @@ import Navbar from './components/Navbar/Navbar'
 import Footer from './components/Footer/Footer'
 import SearchBar from './components/SearchBar/SearchBar'
 
+import { SnackbarProvider, enqueueSnackbar } from 'notistack'
+
+
+
 function App() {
-  
+
 
   return (
     <div className='container'>
-      <Navbar/>
-      <SearchBar/>
-    <Routes>
-      <Route path='/' element={<Home/>} />
-      <Route path='/collection' element={<Collection/>} />
-      <Route path='/contact' element={<Contact/>} />
-      <Route path='/about' element={<About/>} />
-      <Route path='/product/:productId' element={<Product/>} />
-      <Route path='/cart' element={<Cart/>} />
-      <Route path='/login' element={<Login/>} />
-      <Route path='/place-order' element={<PlaceOrder/>} />
-      <Route path='/orders' element={<Order/>} />
-    </Routes>
-    <Footer/>
+
+      <SnackbarProvider />
+
+      <Navbar />
+      <SearchBar />
+      <Routes>
+        <Route path='/' element={<Home />} />
+        <Route path='/collection' element={<Collection />} />
+        <Route path='/contact' element={<Contact />} />
+        <Route path='/about' element={<About />} />
+        <Route path='/product/:productId' element={<Product />} />
+        <Route path='/cart' element={<Cart />} />
+        <Route path='/login' element={<Login />} />
+        <Route path='/place-order' element={<PlaceOrder />} />
+        <Route path='/orders' element={<Order />} />
+      </Routes>
+      <Footer />
+
     </div>
   )
 }
