@@ -1,9 +1,14 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import Title from '../../components/Title/Title'
 import CartItems from '../../components/CartItems/CartItems'
 import { assets } from '../../assets/assets'
+import { ShopContext } from '../../context/ShopContext'
+import { useNavigate } from 'react-router-dom'
+
 
 const PlaceOrder = () => {
+
+  const navigate = useNavigate();
 
   const [method, setMethod] = useState('cod');
   return (
@@ -59,7 +64,7 @@ const PlaceOrder = () => {
           </div>
 
           <div className="w-full text-end mt-8">
-            <button className='bg-black text-white px-16 py-3 text-sm'>PLACE ORDER</button>
+            <button onClick={() => navigate('/orders')} className='bg-black cursor-pointer text-white px-16 py-3 text-sm'>PLACE ORDER</button>
           </div>
         </div>
       </div>
