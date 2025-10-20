@@ -89,11 +89,12 @@ const registerUser = async (req, res) => {
 const adminLogin = async (req, res) => {
 
     try {
-        const { username, password } = req.body;
-        if (username === process.env.ADMIN_NAME && password === process.env.ADMIN_PASSWORD) {
-            const token = jwt.sign(username + password, process.env.JWT_SECRET);
+        const { email, password } = req.body;
+        if (email === process.env.ADMIN_NAME && password === process.env.ADMIN_PASSWORD) {
+            const token = jwt.sign(email + password, process.env.JWT_SECRET);
             return res.json({ success: true, message: "Admin logged in successfully", token });
         }
+        return res.status(401).json({ success: false, message: "Invalid credentials (Email or Password is wrong)" });
     }
     catch (error) {
         console.log(error);

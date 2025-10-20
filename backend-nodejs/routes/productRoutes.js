@@ -10,6 +10,6 @@ productRouter.post('/add', adminAth, upLoad.fields([{ name: "image1", maxCount: 
 { name: "image3", maxCount: 1 }, { name: "image4", maxCount: 1 }]), addProduct);
 productRouter.get('/list', listProduct);
 productRouter.get('/single/:id', singleProduct);
-productRouter.delete('/delete/:id', adminAth, deleteProduct);
+productRouter.delete('/delete', adminAth, deleteProduct);
 
 export default productRouter;
